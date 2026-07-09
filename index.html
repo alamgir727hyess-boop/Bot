@@ -63,7 +63,7 @@ select.input{background:white;color:black;}
 <h3>Complete Ads</h3>
 <div class="progress-text" id="progressText">0 / 30 completed</div>
 <div class="progress-wrap"><div id="progressBar" class="progress-fill"></div></div>
-<button id="watchBtn" class="button primary-btn">Watch Advertisement +0.50 ৳</button>
+<button id="watchBtn" class="button primary-btn">Watch Advertisement +0.3 ৳</button>
 </div>
 </div>
 
@@ -71,7 +71,7 @@ select.input{background:white;color:black;}
 <div id="withdraw" class="page">
 <div class="card">
 <h3>Withdraw Funds</h3>
-<p>Minimum withdraw: BDT 150</p>
+<p>Minimum withdraw: BDT 200</p>
 <select id="method" class="input"><option value="bkash">bKash</option><option value="nagad">Nagad</option></select>
 <input id="account" class="input" placeholder="Account number">
 <input id="amount" class="input" type="number" placeholder="Withdraw amount">
@@ -99,12 +99,12 @@ select.input{background:white;color:black;}
 </div>
 
 <!-- Monetag SDK -->
-<script src='//libtl.com/sdk.js' data-zone='9804827' data-sdk='show_9804827'></script>
+<script src='//libtl.com/sdk.js' data-zone=<script src='//libtl.com/sdk.js' data-zone='11261964' data-sdk='show_11261964'></script>
 
 <script>
-const DAILY_LIMIT = 30
-const REWARD = 0.50
-const MIN_WITHDRAW = 150
+const DAILY_LIMIT = 50
+const REWARD = 0.3
+const MIN_WITHDRAW = 200
 
 if(!localStorage.balance){ localStorage.balance = 0; localStorage.ads = 0; }
 
@@ -130,7 +130,7 @@ if(btn) btn.classList.add("active")
 document.getElementById("watchBtn").onclick = function(){
 let ads = parseInt(localStorage.ads)
 if(ads>=DAILY_LIMIT){ alert("Daily limit reached"); return }
-if(typeof show_9804827 === "function"){
+if(typeof show_11261964 === "function"){
 show_9804827().then(()=>{
 ads++
 let balance = parseFloat(localStorage.balance)+REWARD
